@@ -12,7 +12,11 @@
 				margin: 0px;
 				overflow: hidden;
 			}
-
+			canvas{
+				position: absolute;
+				top: 0px;
+				z-index: -1;
+			}
 			#info {
 				position: absolute;
 				padding-top: 50px;
@@ -112,7 +116,7 @@
 
 				// camera
 
-				camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera = new THREE.PerspectiveCamera( 15, window.innerWidth / window.innerHeight, 1, 10000 );
 				camera.position.set( 1000, 50, 1500 );
 
 				// lights
@@ -170,72 +174,6 @@
 
 				} );
 
-				// sphere
-
-				var ballGeo = new THREE.SphereBufferGeometry( ballSize, 32, 16 );
-				var ballMaterial = new THREE.MeshLambertMaterial();
-
-				sphere = new THREE.Mesh( ballGeo, ballMaterial );
-				sphere.castShadow = true;
-				sphere.receiveShadow = true;
-				scene.add( sphere );
-
-				// ground
-				//
-				// var groundTexture = loader.load( 'textures/terrain/grasslight-big.jpg' );
-				// groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
-				// groundTexture.repeat.set( 25, 25 );
-				// groundTexture.anisotropy = 16;
-				//
-				// var groundMaterial = new THREE.MeshLambertMaterial( { map: groundTexture } );
-				//
-				// var mesh = new THREE.Mesh( new THREE.PlaneBufferGeometry( 20000, 20000 ), groundMaterial );
-				// mesh.position.y = - 250;
-				// mesh.rotation.x = - Math.PI / 2;
-				// mesh.receiveShadow = true;
-				// scene.add( mesh );
-
-				// poles
-
-				// var poleGeo = new THREE.BoxBufferGeometry( 5, 375, 5 );
-				// var poleMat = new THREE.MeshLambertMaterial();
-				//
-				// var mesh = new THREE.Mesh( poleGeo, poleMat );
-				// mesh.position.x = - 125;
-				// mesh.position.y = - 62;
-				// mesh.receiveShadow = true;
-				// mesh.castShadow = true;
-				// scene.add( mesh );
-				//
-				// var mesh = new THREE.Mesh( poleGeo, poleMat );
-				// mesh.position.x = 125;
-				// mesh.position.y = - 62;
-				// mesh.receiveShadow = true;
-				// mesh.castShadow = true;
-				// scene.add( mesh );
-				//
-				// var mesh = new THREE.Mesh( new THREE.BoxBufferGeometry( 255, 5, 5 ), poleMat );
-				// mesh.position.y = - 250 + ( 750 / 2 );
-				// mesh.position.x = 0;
-				// mesh.receiveShadow = true;
-				// mesh.castShadow = true;
-				// scene.add( mesh );
-				//
-				// var gg = new THREE.BoxBufferGeometry( 10, 10, 10 );
-				// var mesh = new THREE.Mesh( gg, poleMat );
-				// mesh.position.y = - 250;
-				// mesh.position.x = 125;
-				// mesh.receiveShadow = true;
-				// mesh.castShadow = true;
-				// scene.add( mesh );
-				//
-				// var mesh = new THREE.Mesh( gg, poleMat );
-				// mesh.position.y = - 250;
-				// mesh.position.x = - 125;
-				// mesh.receiveShadow = true;
-				// mesh.castShadow = true;
-				// scene.add( mesh );
-
 				// renderer
 
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
@@ -255,16 +193,8 @@
 				controls.minDistance = 1000;
 				controls.maxDistance = 5000;
 
-				// performance monitor
-
-				// stats = new Stats();
-				// container.appendChild( stats.dom );
-
-				//
-
 				window.addEventListener( 'resize', onWindowResize, false );
 
-				sphere.visible = ! true;
 
 			}
 
@@ -295,7 +225,6 @@
 
 				simulate( time );
 				render();
-				// stats.update();
 
 			}
 
@@ -315,7 +244,7 @@
 
 				clothGeometry.computeVertexNormals();
 
-				sphere.position.copy( ballPosition );
+				// sphere.position.copy( ballPosition );
 
 				renderer.render( scene, camera );
 
