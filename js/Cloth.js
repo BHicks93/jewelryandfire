@@ -188,33 +188,6 @@ function Cloth( w, h ) {
 
 	}
 
-
-	// While many systems use shear and bend springs,
-	// the relaxed constraints model seems to be just fine
-	// using structural springs.
-	// Shear
-	// var diagonalDist = Math.sqrt(restDistance * restDistance * 2);
-
-
-	// for (v=0;v<h;v++) {
-	// 	for (u=0;u<w;u++) {
-
-	// 		constraints.push([
-	// 			particles[index(u, v)],
-	// 			particles[index(u+1, v+1)],
-	// 			diagonalDist
-	// 		]);
-
-	// 		constraints.push([
-	// 			particles[index(u+1, v)],
-	// 			particles[index(u, v+1)],
-	// 			diagonalDist
-	// 		]);
-
-	// 	}
-	// }
-
-
 	this.particles = particles;
 	this.constraints = constraints;
 
