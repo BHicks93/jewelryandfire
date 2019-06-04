@@ -29,7 +29,7 @@ textarea
 	white-space:normal;
 	background:none;
 	line-height:1;
-
+	-webkit-appearance: none;
 	/* Browsers have different default form fonts */
 	font-size:13px;
 	font-family:Arial;
