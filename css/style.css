@@ -1,5 +1,6 @@
   body {
-    font-family: helvetica, arial, sans-serif;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: 300;
     background-color: #000;
     color: #fff;
     margin: 0px;
@@ -14,7 +15,7 @@
     position: absolute;
     padding: 10px 0px 0px 10px;
     width: 100%;
-    font-size: 6vw;
+    font-size: 72px;
     line-height: 1.2em;
     z-index: 2;
   }
@@ -31,13 +32,27 @@
     padding-left: 10px;
     color: #fff;
     background-color: transparent;
-    font-size: 2em;
+    font-size: 36px;
     text-align: left;
   }
   input[type=submit]:hover {
     text-decoration: underline;
     cursor: pointer;
-}
+  }
   a {
     cursor: pointer;
   }
+
+@media only screen
+  and (min-device-width : 375px)
+  and (max-device-width : 812px)
+  and (-webkit-device-pixel-ratio : 3) {
+  #info {
+    font-size: 36px;}
+}
+@media screen
+  and (min-device-width : 375px)
+  and (max-device-width : 812px) {
+  #info {
+    font-size: 36px;}
+}
