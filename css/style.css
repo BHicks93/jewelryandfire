@@ -19,13 +19,6 @@
     line-height: 1.4em;
     z-index: 2;
   }
-  #button{
-    position: fixed;
-    width: 100%;
-    height: 70px;
-    bottom: 0px;
-    text-align: left;
-  }
   #name{
     font-weight: 500;
   }
@@ -36,16 +29,25 @@
     padding: 22px;
     cursor: pointer;
   }
+  #button{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    bottom: 0px;
+    text-align: left;
+  }
   input[type=submit] {
     height: 100%;
     width: 100%;
     padding-bottom: 0px;
-    color: #000;
-    background-color: #fff;
+    color: #fff;
+    background-color: #000;
     text-align: center;
     font-size: 18px;
   }
   input[type=submit]:hover {
+    color: #000;
+    background-color: #fff;
     cursor: pointer;
   }
   a {
@@ -56,8 +58,8 @@
   and (min-device-width : 375px)
   and (max-device-width : 812px)
   and (-webkit-device-pixel-ratio : 3) {
-  #info {
-    font-size: 18px;}
+  #info {font-size: 18px;}
+    input[type=submit] {border-radius: 0px;}
 }
 @media screen
   and (min-device-width : 375px)
