@@ -60,6 +60,7 @@
   and (-webkit-device-pixel-ratio : 3) {
   #info {font-size: 18px;}
     input[type=submit] {border-radius: 0px;}
+    input[type=submit]:hover {border-radius: 0px;}
 }
 @media screen
   and (min-device-width : 375px)
