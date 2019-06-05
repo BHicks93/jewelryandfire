@@ -12,7 +12,15 @@
     z-index: -1;
   }
   a {
+    color: #fff;
     cursor: pointer;
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+  a:visited{
+    color: #fff;
   }
   #info {
     position: relative;
