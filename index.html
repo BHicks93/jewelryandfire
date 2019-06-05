@@ -16,7 +16,18 @@
 		<div id="info">
 			<div id="name">Bondage Bandana #01</div>
 			<div id="price">$25.00</div>
+			<div class="trigger" id="more-info-trigger" onclick="showInfo()">More Info</div>
 			<a href="https://www.instagram.com/jewelryandfire/"><img class="image" border="0" src="images/insta.png" width="22px" height="22px"></a>
+		</div>
+		<div class="closed" id="more-info">
+			<div class="trigger" id="close-trigger" onclick="hideInfo()">Close</div>
+			<div id="product-description">Neighborhood was originally conceived as part of founder Shinsuke Takizawa’s motorcycle enthusiast interests; the lack of motorcycle apparel that was suitably functional and fashionable spurred Takizawa to create his own label.</br></br> Neighborhood’s mix of technical expertise, luxury construction standards, and classic utilitarian and subculture aesthetics made the brand a cornerstone of modern streetwear.</div>
+			<div id="product-details">Printed in Brooklyn</br>
+					Measures 21 x 21 (in)</br>
+					Free shipping</br></br>
+					Contact: jewelryandfire@gmail.com</br>
+					Website by brian.gd
+				</div>
 		</div>
 		<form id="button" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
 		<input type="hidden" name="cmd" value="_s-xclick">
@@ -24,7 +35,7 @@
 		<input type="submit" value="Buy Now" name="submit">
 		<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 		</form>
-		 <script src="build/three.js"></script>
+		<script src="build/three.js"></script>
 		<script src="js/WebGL.js"></script>
 		<script src="js/controls/OrbitControls.js"></script>
 		<!-- <script src="js/libs/stats.min.js"></script>-->
@@ -219,7 +230,16 @@
 				renderer.render( scene, camera );
 
 			}
-
+			function showInfo() {
+			   var element = document.getElementById("more-info");
+			   element.classList.toggle("open");
+				 console.log("hello");
+			}
+			function hideInfo() {
+			   var element = document.getElementById("more-info");
+			   element.classList.remove("open");
+				 console.log("bye");
+			}
 		</script>
 	</body>
 </html>
