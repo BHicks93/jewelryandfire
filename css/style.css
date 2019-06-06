@@ -1,10 +1,13 @@
-  body {
+html, body {
+overflow: hidden;
+}
+body {
+    position: relative;
     font-family: "Helvetica", Arial, sans-serif;
     font-weight: 300;
     background-color: #000;
     color: #fff;
     margin: 0px;
-    overflow: hidden;
   }
   canvas{
     position: absolute;
@@ -44,6 +47,7 @@
   }
   #product-description{
     width: 340px;
+    margin: 5px 0px 22px 0px;
   }
   #product-details{
     padding-top: 22px;
@@ -103,11 +107,11 @@
     #info {font-size: 18px;}
     input[type=submit] {border-radius: 0px;}
     input[type=submit]:hover {border-radius: 0px;}
-    #more-info{width: 100vw;}
+    #more-info{width: 100vw; height: 100vh;}
 }
 @media screen
   and (min-device-width : 375px)
   and (max-device-width : 812px) {
     #info {font-size: 18px;}
-    #more-info{width: 100vw;}
+    #more-info{width: 100vw; height: 100vh;}
 }
