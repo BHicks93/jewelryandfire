@@ -102,14 +102,16 @@ body {
   and (min-device-width : 375px)
   and (max-device-width : 812px)
   and (-webkit-device-pixel-ratio : 3) {
+    body{overflow: hidden;}
     #info {font-size: 18px;}
     input[type=submit] {border-radius: 0px;}
     input[type=submit]:hover {border-radius: 0px;}
-    #more-info{width: 100vw; height: 100vh; background: #000;}
+    #more-info{width: 100vw; background: #000;}
 }
 @media screen
   and (min-device-width : 375px)
   and (max-device-width : 812px) {
+    body{overflow: hidden;}
     #info {font-size: 18px;}
-    #more-info{width: 100vw; height: 100vh; background: #000;}
+    #more-info{width: 100vw; background: #000;}
 }
