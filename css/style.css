@@ -54,10 +54,6 @@ body {
   #name{
     font-weight: 600;
   }
-  #price{
-    font-size: 14px;
-    font-weight: 500;
-  }
   .trigger{
     text-decoration: underline;
     font-size: 13px;
